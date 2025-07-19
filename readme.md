@@ -1,4 +1,5 @@
 PUT log-000001
+````json
 {
   "aliases": {
     "log-write-alias": {
@@ -6,9 +7,10 @@ PUT log-000001
     }
   }
 }
-
+```
 
 PUT _index_template/logs_template
+````json
 {
   "index_patterns": ["log-*"],
   "template": {
@@ -19,4 +21,4 @@ PUT _index_template/logs_template
       "index.lifecycle.rollover_alias": "log-write-alias"
     }
   }
-}
+}```
